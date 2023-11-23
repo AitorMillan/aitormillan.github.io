@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="#inicio" class="home-link">🏠</a> <!-- Emoji de casa como botón de inicio -->
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- El contenido principal de la página se envuelve en una etiqueta main para aplicar el padding-top y evitar la superposición con la barra de navegación fija -->
+    <main>
+        <section id="inicio" class="intro-section">
+                <div class="container">    
+                <div>
+                    <h1>Aitor Millán Trujillo</h1>
+
+                    <a class="fancy" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">Descarga mi CV</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                  </a>
+                  
+                  <button id = "descarga">
+                    Descarga mi CV
+                  </button>
+                </div>
+
+                <div>
+                    <ul class="contact-icon">
+                        <li><a href="https://www.instagram.com/aitormt_02/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a></li>
+                        <li><a href="#" class="fa-brands fa-whatsapp"></a></li>
+                        <li><a href="https://github.com/AitorMillan" target="_blank" rel="noopener noreferrer" class="fa-brands fa-github"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>¡Hola!, soy Aitor Millán Trujillo, estudiante de ingeniería informática en la Escuela Superior de Informática de Ciudad Real. </p>
+            <p> Me considero una persona sociable y trabajadora, con ganas de aprender y mejorar.</p>
+            <p> Me adapto con facilidad a los cambios, soy proactivo y no tengo problemas trabajando en equipo.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Descripción de algunos proyectos en los que has trabajado.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo electrónico">
+                <textarea placeholder="Tu mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>©2023 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

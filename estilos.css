@@ -12,6 +12,11 @@
     font-family: 'Lora';
     src: url('fonts/lora-regular-webfont.woff') format('woff');
 }
+
+#div-titulo h1{
+  padding-bottom: 27px;
+}
+
 /* Reset básico para asegurarse de que el padding y el margin son iguales en todos los navegadores */
 * {
     margin: 0;
@@ -103,13 +108,13 @@ section {
                       linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
     background-size: 55px 55px;
   }
-  
+
 
 .contact-icon {
+    bottom: -14rem;
     list-style: none;
     display: flex;
     justify-content: center; /* Centra los iconos horizontalmente */
-    bottom: -17rem;
     position: relative;
 }
   .contact-icon li {
@@ -143,7 +148,6 @@ section {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-bottom: 4px solid #dc2743;
   }
   .contact-icon li:nth-child(2):before {
     content: "\f232";
@@ -152,11 +156,17 @@ section {
   .contact-icon li:nth-child(3):before {
     content: "\f09b";
     color: var(--github-color); 
-    border-bottom: 4px solid var(--github-color); /*Quitar si quiero quitar la barra de arriba*/
   }
   .contact-icon li:hover:before {
     height: 100%;
   }
+
+  @media screen and (max-height: 642px) {
+    .contact-icon {
+        bottom: -10rem; /* Ajusta este valor según sea necesario */
+    }
+  }
+
 /* Estilos para cada sección específica si es necesario */
 
 .fancy {

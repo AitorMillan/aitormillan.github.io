@@ -163,7 +163,7 @@ section {
 
   @media screen and (max-height: 642px) {
     .contact-icon {
-        bottom: -10rem; /* Ajusta este valor según sea necesario */
+        bottom: -8rem; /* Ajusta este valor según sea necesario */
     }
   }
 

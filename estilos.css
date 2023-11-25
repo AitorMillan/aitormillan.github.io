@@ -161,11 +161,17 @@ section {
     height: 100%;
   }
 
-  @media screen and (max-height: 642px) {
+  @media screen and (min-height: 443px) and (max-height: 642px) {
     .contact-icon {
-        bottom: -8rem; /* Ajusta este valor según sea necesario */
+        bottom: -8rem; /* Para pantallas con altura entre 443px y 642px */
     }
+}
+
+@media screen and (max-height: 442px) {
+  .contact-icon {
+      bottom: -6rem; /* Para pantallas con altura hasta 442px */
   }
+}
 
 /* Estilos para cada sección específica si es necesario */
 

@@ -9,6 +9,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+setTimeout(function() {
+
+    $('#inicio h1').fitText(1, { minFontSize: '42px', maxFontSize: '68.8px' });
+
+}, 100);
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('#navbar a');

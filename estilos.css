@@ -30,16 +30,9 @@ body, html {
 
 #navbar {
     background-color: var(--navbar-background-color);
-    overflow: hidden; /* Si algo se saliera fuera del navbar, se ocultaría*/
-    position: fixed; /* Hace que el navbar esté siempre en la parte superior de la pantalla */
-    width: 100%; /* Hace que el navbar ocupe todo el espacio horizontalmente */
-    display: flex; /* Sirve para alinear los elementos, sin él estarían uno encima de otro */
-    align-items: center; /* Centramos los elementos verticalmente */
     padding: 0 10px;
-    top: 0; 
-    left: 0; 
-    z-index: 1000; 
 }
+
 
 #navbar .home-link {
     margin-right: 10px; /* Añadimos algo de margen a la derecha */

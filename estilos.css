@@ -125,7 +125,6 @@ section {
     position: relative;
 }
   .contact-icon li {
-    position: relative;
     list-style: none;
     margin: 20px;/*poiner padding a lu*/
     cursor: pointer;
@@ -142,11 +141,11 @@ section {
     pointer-events: none;
     font-family: "FontAwesome";
     position: absolute;
-    top: 0;
+    top: 10px;
     font-size: 2.5em;
     height: 0;
     overflow: hidden;
-    transition: 0.5s ease-in-out;
+    transition: 0.8s ease-out;
   }
 
   .contact-icon li:nth-child(1):before {

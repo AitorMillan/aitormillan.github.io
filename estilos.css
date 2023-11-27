@@ -95,9 +95,6 @@ section {
     color: #79e2da; 
   }
 
-
-
-
   #div-titulo p{
     padding-bottom: 1.5rem;
     color: #79e2da;
@@ -107,6 +104,12 @@ section {
   .barra{
     color: rgba(121, 226, 218, 0.7);
     margin: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .barra {
+      display: none;
+    }
   }
 
 .contact-icon {

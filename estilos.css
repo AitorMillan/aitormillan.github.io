@@ -106,11 +106,7 @@ section {
     margin: 14px;
   }
 
-  @media (max-width: 768px) {
-    .barra {
-      display: none;
-    }
-  }
+
 
 .contact-icon {
 

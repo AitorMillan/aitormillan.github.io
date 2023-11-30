@@ -6,6 +6,7 @@
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     --whatsapp-color: #25D366;
     --github-color: #788199;
+    --background-color: #fcf6f1;
 }
 
 @font-face {
@@ -76,6 +77,10 @@ section {
     min-height: 720px;
 }
 
+#sobre-mi{
+  background: var(--background-color);
+}
+
 #inicio{
   display: flex;
   align-items: center; /* Centra verticalmente */
@@ -104,12 +109,6 @@ section {
   .barra{
     color: rgba(121, 226, 218, 0.7);
     margin: 14px;
-  }
-
-  @media (max-width: 768px) {
-    .barra {
-      display: none;
-    }
   }
 
 .contact-icon {

@@ -29,13 +29,21 @@
                     <div id="div-titulo" class="col-12">
                         <h1 style="font-size: 68.8px;">Aitor Millán Trujillo</h1>
                         
-                        <p>
-                            <span class = "barra">|</span>
-                            INGENIERÍA INFORMÁTICA
-                            <span class = "barra">|</span>
-                            TECNOLOGÍAS DE LA INFORMACIÓN
-                            <span class = "barra">|</span>
-                        </p>
+                    <!-- Versión para pantallas grandes -->
+                    <p class="d-none d-md-block">
+                        <span class="barra">|</span>
+                        INGENIERÍA INFORMÁTICA
+                        <span class="barra">|</span>
+                        TECNOLOGÍAS DE LA INFORMACIÓN
+                        <span class="barra">|</span>
+                    </p>
+
+                    <!-- Versión para pantallas pequeñas -->
+                    <p class="d-md-none">
+                        INGENIERÍA INFORMÁTICA
+                        <br>
+                        TECNOLOGÍAS DE LA INFORMACIÓN
+                    </p>
                         
                         <a class="fancy" href="#">
                             <span class="top-key"></span>
@@ -57,10 +65,30 @@
         </section>
         
         <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>¡Hola!, soy Aitor Millán Trujillo, estudiante de ingeniería informática en la Escuela Superior de Informática de Ciudad Real. </p>
-            <p> Me considero una persona sociable y trabajadora, con ganas de aprender y mejorar.</p>
-            <p> Me adapto con facilidad a los cambios, soy proactivo y no tengo problemas trabajando en equipo.</p>
+
+            <div class="container">
+                <div class="row align-items-stretch"> <!-- Asegura que los elementos de la fila se estiren para igualar la altura del elemento más alto -->
+                  <!-- Columna para la imagen -->
+                  <div class="col-md-5 d-flex justify-content-center"> <!-- Centra la imagen horizontalmente -->
+                    <img src="images/fotoAitor.jpg" alt="Foto" class="img-fluid rounded-circle" style="max-width: 50%; height: auto;">
+                  </div>
+              
+                  <!-- Columna para la barra divisoria -->
+                  <div class="col-md-1">
+                    <div class="vr" style="height: 100%;"></div> <!-- Aplica la altura completa a la línea vertical -->
+                  </div>
+              
+                  <!-- Columna para el texto -->
+                  <div class="col-md-6">
+                    <div> <!-- Envuelve el texto en un div para controlar mejor el alineamiento -->
+                      <h2>Sobre Mí</h2>
+                      <p>¡Hola!, soy Aitor Millán Trujillo, estudiante de ingeniería informática en la Escuela Superior de Informática de Ciudad Real. </p>
+                      <p> Me considero una persona sociable y trabajadora, con ganas de aprender y mejorar.</p>
+                      <p> Me adapto con facilidad a los cambios, soy proactivo y no tengo problemas trabajando en equipo.</p>                    </div>
+                  </div>
+                </div>
+              </div>
+
         </section>
 
         <section id="proyectos">

@@ -6,7 +6,8 @@
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     --whatsapp-color: #25D366;
     --github-color: #788199;
-    --background-color: #fcf6f1;
+    --background-color: #E0FFFF
+    /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed*/ 
 }
 
 @font-face {
@@ -77,9 +78,20 @@ section {
     min-height: 720px;
 }
 
+/*Sección sobre mi*/
+
 #sobre-mi{
   background: var(--background-color);
 }
+
+#info-sobre-mi p{
+  font-size: 16px;
+}
+
+#sobre-mi .vr {
+  border-left: 2px solid #000; 
+}
+/*Sección inicio*/
 
 #inicio{
   display: flex;

@@ -6,7 +6,8 @@
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     --whatsapp-color: #25D366;
     --github-color: #788199;
-    --background-color: #E0FFFF
+    --background-color1: #E0FFFF;
+    --background-color2: #fff;
     /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed*/ 
 }
 
@@ -75,13 +76,22 @@ section {
     height: 100%; /* Altura de prueba para cada sección */
     width: 100%;
     padding-top: 60px;
-    min-height: 720px;
+
 }
 
+#proyectos{
+  min-height: 720px;
+}
+
+
+#contacto{
+  min-height: 720px;
+}
 /*Sección sobre mi*/
 
 #sobre-mi{
-  background: var(--background-color);
+  background: var(--background-color1);
+  min-height: 580px;
 }
 
 #info-sobre-mi p{
@@ -91,6 +101,38 @@ section {
 #sobre-mi .vr {
   border-left: 2px solid #000; 
 }
+
+#tecnologías{
+  min-height: 580px;
+  background: var(--background-color2);
+}
+
+.technology-box {
+  border: 2px solid #000;
+  position: relative; /* Set the position to relative to use absolute positioning within it */
+  margin: 20px auto;
+  padding-top: 20px; /* This value might need to be less than the negative top value of the header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border-radius: 8px; /* rounded corners */
+}
+
+.technology-header {
+  font-weight: bold; /* make the header bold */
+  position: absolute; /* Position it absolutely to take it out of the flow */
+  top: -15px; /* Adjust this value to half of the header's height */
+  transform: translateX(-50%); /* Adjust horizontal position */
+  background: #fff;
+  display: inline-block;
+  font-size: 1.25em;
+  box-shadow: 0 2px #fff; /* Hide the top border right behind the header */
+}
+
+.technology-list {
+  font-size: 1em;
+  padding: 20px 0;
+}
+
+
 /*Sección inicio*/
 
 #inicio{

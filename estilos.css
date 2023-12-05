@@ -6,9 +6,11 @@
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     --whatsapp-color: #25D366;
     --github-color: #788199;
-    --background-color1: #E0FFFF;
-    --background-color2: #fff;
-    /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed*/ 
+    --background-color1: #edf0f6;
+    /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed edf0f6*/ 
+    --background-color2: #e6e9f0;
+    /* F4F7F6*/
+    --border-color: #d1d9e6; /* Un color de borde más suave */
 }
 
 @font-face {
@@ -26,9 +28,13 @@
     padding: 0;
     box-sizing: border-box; /* Esto asegura que el padding no afecte al ancho total de los elementos */
 }
+
+h1 {
+  font-family: 'Lora', serif; 
+}
+
 body, html {
-    font-family: 'Lora', serif; 
-    scroll-behavior: smooth; 
+  scroll-behavior: smooth; 
 }
 
 #navbar {
@@ -38,14 +44,14 @@ body, html {
 
 
 #navbar .home-link {
-    margin-right: 10px; /* Añadimos algo de margen a la derecha */
+    margin-right: 10px;
     font-size: 1.5em; /* Ajustamos el tamaño del icono para hacerlo más grande */
     color: inherit; /* El color será el mismo que el de los enlaces */
 }
 
 /* Esto afecta a todas las etiquetas <a> dentro del lavbar */
 #navbar a {
-    padding: 14px 16px; /* Añadimos padding */
+    padding: 14px 16px;
     margin-right: 8px; /* Añadimos margen para separar los elementos */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     transition: background-color 0.3s, transform 0.3s; /* Suaviza la transición de color y transformación al quitar el ratón */
@@ -94,46 +100,70 @@ section {
   min-height: 580px;
 }
 
-#info-sobre-mi p{
-  font-size: 16px;
-}
-
 #sobre-mi .vr {
   border-left: 2px solid #000; 
 }
 
-#tecnologías{
+#tecnologias {
   min-height: 580px;
-  background: var(--background-color2);
+  background: var(--background-color2); 
 }
 
 .technology-box {
-  border: 2px solid #000;
-  position: relative; /* Set the position to relative to use absolute positioning within it */
+  border: 2px solid var(--border-color); /* Color de borde más suave */
+  position: relative;
   margin: 20px auto;
-  padding-top: 20px; /* This value might need to be less than the negative top value of the header */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
-  border-radius: 8px; /* rounded corners */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: var(--color-gradient-start);
+  padding-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  justify-content: space-around;
 }
 
+/* Estilos para el encabezado de la tecnología */
 .technology-header {
-  font-weight: bold; /* make the header bold */
-  position: absolute; /* Position it absolutely to take it out of the flow */
-  top: -15px; /* Adjust this value to half of the header's height */
-  transform: translateX(-50%); /* Adjust horizontal position */
-  background: #fff;
-  display: inline-block;
-  font-size: 1.25em;
-  box-shadow: 0 2px #fff; /* Hide the top border right behind the header */
+  font-weight: bold;
+  position: absolute;
+  top: -21px;
+  background: var(--color-background-default);
+  padding: 5px 10px; /* Añade padding para el encabezado */
+  border-radius: 4px; /* Bordes redondeados para el encabezado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para el encabezado */
 }
 
-.technology-list {
-  font-size: 1em;
-  padding: 20px 0;
+
+.technology-image {
+  flex: 0 0 33.333%;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  position: relative;
+  padding: 5px;
+}
+
+.technology-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.technology-image:hover {
+  transform: scale(1.1); /* Slightly increase the size of the image */
 }
 
 
 /*Sección inicio*/
+
+#inicio p{
+  font-family: 'Lora', serif;
+}
 
 #inicio{
   display: flex;
@@ -214,8 +244,6 @@ section {
   .contact-icon li:hover:before {
     height: 100%;
   }
-
-/* Estilos para cada sección específica si es necesario */
 
 .fancy {
   background-color: transparent;

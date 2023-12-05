@@ -26,13 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
         while(--index && window.scrollY + OFFSET_TOP < sections[index].offsetTop) {}
 
         navLinks.forEach((link) => link.classList.remove('active'));
-        // Asegúrate de que exista un enlace correspondiente a la sección actual antes de intentar agregar la clase 'active'
+
         const activeSection = sections[index];
-        if (activeSection) {
-            const activeLink = document.querySelector('#navbar a[href="#' + activeSection.id + '"]');
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
+        let activeLink;
+        
+        // Verificar si la sección activa es "tecnologías"
+        if (activeSection && activeSection.id === 'tecnologias') {
+            // Cambiar el enlace activo a "sobre-mi"
+            activeLink = document.querySelector('#navbar a[href="#sobre-mi"]');
+        } else {
+            // Seleccionar el enlace correspondiente a la sección activa
+            activeLink = document.querySelector('#navbar a[href="#' + activeSection.id + '"]');
+        }
+
+        if (activeLink) {
+            activeLink.classList.add('active');
         }
     }
 

@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let activeLink;
         
         // Verificar si la sección activa es "tecnologías"
-        if (activeSection && activeSection.id === 'tecnologias') {
+        if (activeSection && (activeSection.id === 'tecnologias' || activeSection.id == 'formacion')) {
             // Cambiar el enlace activo a "sobre-mi"
             activeLink = document.querySelector('#navbar a[href="#sobre-mi"]');
         } else {

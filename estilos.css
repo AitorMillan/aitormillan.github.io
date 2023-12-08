@@ -470,3 +470,8 @@ section {
 .proyecto{
   background-color: transparent;
 }
+
+.nav-link:hover {
+  background-color: #c7c7c7; /* Un azul más intenso */
+}
+

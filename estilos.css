@@ -449,13 +449,22 @@ section {
 /*SECCIÓN PORTFOLIO*/
 
 .card-header {
-  position: relative; /* Define el card-header como referencia para la posición absoluta del nav */
+  position: relative;
+  background-color: #f5f5f5; /* Fondo claro para las pestañas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
 }
 
+.card-text{
+  text-wrap: pretty;
+  white-space: normal;
+}
 
+.content{
+  background-color: var(--background-color2);
+}
 
-#proyectos{
-  background-color: #e6e9f0;
+.tab-content{
+  padding: 30px;
 }
 
 .proyecto{

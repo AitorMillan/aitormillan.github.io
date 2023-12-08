@@ -14,21 +14,7 @@ setTimeout(function() {
     $('#inicio h1').fitText(1, { minFontSize: '42px', maxFontSize: '68.8px' });
 
 }, 100);
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Busca todos los botones dentro de las tarjetas de proyecto
-    const flipButtons = document.querySelectorAll('.project-card .btn-dark');
-
-    flipButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Encuentra el contenedor más cercano de la tarjeta
-            const card = this.closest('.project-card-flip');
-
-            // Agrega o elimina la clase que aplica la rotación
-            card.classList.toggle('is-flipped');
-        });
-    });
-});
+  
 
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');

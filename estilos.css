@@ -447,48 +447,17 @@ section {
 }
 
 /*SECCIÓN PORTFOLIO*/
-.project-card-container {
-  margin-bottom: 30px; /* Añade un margen si es necesario */
-  display: flex; /* Use flexbox */
-  align-items: stretch; /* Stretch the children to fit the container's height */
+
+.card-header {
+  position: relative; /* Define el card-header como referencia para la posición absoluta del nav */
 }
 
-.project-card {
-  position: absolute; /* Posicionamiento absoluto para superponer las tarjetas */
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  width: 100%; /* Asegúrate de que la tarjeta ocupe todo el contenedor */
-  height: 100%; /* Asegúrate de que la tarjeta ocupe todo el contenedor */
-  display: flex; /* Apply flex layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+
+
+#proyectos{
+  background-color: #e6e9f0;
 }
 
-.project-card-flip {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-  min-height: 300px; /* Adjust this value based on your content's needs */
-}
-
-.project-card-flip.is-flipped {
-  transform: rotateY(180deg);
-}
-.back {
-  transform: rotateY(180deg);
-}
-
-.tech-icons {
-  font-size: 24px;
-}
-
-.tech-icons i {
-  margin-right: 10px;
-}
-
-.btn-dark {
-  background-color: #333;
-  border: none;
+.proyecto{
+  background-color: transparent;
 }

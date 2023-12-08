@@ -448,42 +448,36 @@ section {
 
 /*SECCIÓN PORTFOLIO*/
 .project-card-container {
-  perspective: 1000px;
   margin-bottom: 30px; /* Añade un margen si es necesario */
+  display: flex; /* Use flexbox */
+  align-items: stretch; /* Stretch the children to fit the container's height */
+}
+
+.project-card {
+  position: absolute; /* Posicionamiento absoluto para superponer las tarjetas */
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%; /* Asegúrate de que la tarjeta ocupe todo el contenedor */
+  height: 100%; /* Asegúrate de que la tarjeta ocupe todo el contenedor */
+  display: flex; /* Apply flex layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
 .project-card-flip {
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
   transform-style: preserve-3d;
+  transition: transform 0.6s;
+  min-height: 300px; /* Adjust this value based on your content's needs */
 }
 
-.project-card-flip:hover {
+.project-card-flip.is-flipped {
   transform: rotateY(180deg);
 }
-
-.project-card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.front {
-  z-index: 2;
-}
-
 .back {
   transform: rotateY(180deg);
-  z-index: 1;
-  background: #fff; /* Fondo blanco para el reverso */
-}
-
-.project-card-body {
-  padding: 20px;
 }
 
 .tech-icons {
@@ -494,17 +488,7 @@ section {
   margin-right: 10px;
 }
 
-/* Ajustes de estilos para Bootstrap y la tarjeta */
-.row.align-items-center {
-  height: 100%;
-}
-
 .btn-dark {
   background-color: #333;
   border: none;
-}
-
-/* Asegúrate de que la tarjeta trasera tenga un fondo */
-.back {
-  background: #f8f9fa;
 }

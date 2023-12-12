@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'Lora';
-    src: url('fonts/lora-regular-webfont.woff') format('woff');
+    src: url('../fonts/lora-regular-webfont.woff') format('woff');
 }
 
 #div-titulo h1{

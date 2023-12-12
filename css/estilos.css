@@ -104,9 +104,20 @@ section {
   border-left: 2px solid #000; 
 }
 
+#sobre-mi p{
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .foto-perfil {
+    padding: 10px; /* Mejorar el espaciado en móviles */
+  }
+
+}
+
 #tecnologias {
-  min-height: 580px;
-  background: var(--background-color2); 
+  min-height: 730px;
+  background: var(--background-color1); 
 }
 
 .technology-box {
@@ -393,7 +404,17 @@ section {
 
 /* Estilos personalizados para la timeline */
 #formacion{
-  background-color: var(--background-color1);
+  background-color: var(--background-color2);
+}
+
+/* Esto centrará el texto del primer li */
+#formacion li:first-child {
+  text-align: center;
+}
+
+/* Esto alineará a la derecha todos los li que no son el primero */
+#formacion li:not(:first-child) {
+  text-align: left;
 }
 
 .timeline-line {

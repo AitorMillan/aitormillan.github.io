@@ -9,7 +9,13 @@
 
 <url>
   <loc>https://aitormillan.github.io/</loc>
-  <lastmod>2023-12-12T15:53:19+00:00</lastmod>
+  <lastmod>2023-12-12T17:04:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aitormillan.github.io/images/CV-AitorMillan.pdf</loc>
+  <lastmod>2023-12-12T17:04:01+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 

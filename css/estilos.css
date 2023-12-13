@@ -4,7 +4,7 @@
     --navbar-text-color: #d9d9d9; /* Gris claro */
     --navbar-hover-active-color: #4ecdc4; /* Verde turquesa */
     --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    --whatsapp-color: #25D366;
+    --linkedin-color: #0A66C2;
     --github-color: #788199;
     --background-color1: #edf0f6;
     /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed edf0f6*/ 
@@ -31,6 +31,10 @@
 
 h1 {
   font-family: 'Lora', serif; 
+}
+
+h2 {
+  color: var(--navbar-background-color) !important;
 }
 
 body, html {
@@ -89,10 +93,6 @@ section {
   min-height: 720px;
 }
 
-
-#contacto{
-  min-height: 720px;
-}
 /*Sección sobre mi*/
 
 #sobre-mi{
@@ -245,8 +245,8 @@ section {
     -webkit-text-fill-color: transparent;
   }
   .contact-icon li:nth-child(2):before {
-    content: "\f232";
-    color: var(--whatsapp-color);
+    content: "\f08c";
+    color: var(--linkedin-color);
   }
   .contact-icon li:nth-child(3):before {
     content: "\f09b";
@@ -496,3 +496,7 @@ section {
   background-color: #c7c7c7; /* Un azul más intenso */
 }
 
+/* Sección contacto */
+#contacto{
+  background-color: #eceef1;
+}

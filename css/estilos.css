@@ -7,9 +7,7 @@
     --linkedin-color: #0A66C2;
     --github-color: #788199;
     --background-color1: #edf0f6;
-    /*Posibles colores: #E0FFFF f5f5f5 #e4fbfb #fff6ed edf0f6*/ 
     --background-color2: #e6e9f0;
-    /* F4F7F6*/
     --border-color: #d1d9e6; /* Un color de borde más suave */
 }
 
@@ -39,6 +37,7 @@ h2 {
 
 body, html {
   scroll-behavior: smooth; 
+  background: #000;
 }
 
 #navbar {
@@ -87,11 +86,7 @@ section {
     width: 100%;
     padding-top: 60px;
 
-}
-
-#proyectos{
-  min-height: 720px;
-}
+} 
 
 /*Sección sobre mi*/
 
@@ -360,8 +355,6 @@ section {
   width: 0;
 }
 
-/**/
-
 #descarga {
   font-size: 18px;
   color: #e1e1e1;
@@ -500,3 +493,7 @@ section {
 #contacto{
   background-color: #eceef1;
 }
+.texto-contacto{
+  margin-bottom: -10px;
+}
+

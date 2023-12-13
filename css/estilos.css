@@ -42,14 +42,7 @@ body, html {
 
 #navbar {
     background-color: var(--navbar-background-color);
-    padding: 0 10px;
-}
-
-
-#navbar .home-link {
-    margin-right: 10px;
-    font-size: 1.5em; /* Ajustamos el tamaño del icono para hacerlo más grande */
-    color: inherit; /* El color será el mismo que el de los enlaces */
+    padding: 5px 10px;
 }
 
 /* Esto afecta a todas las etiquetas <a> dentro del lavbar */

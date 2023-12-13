@@ -19,32 +19,43 @@ setTimeout(function() {
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('#navbar a');
-    const OFFSET_TOP = 50; // Ajusta este valor si es necesario
+    const OFFSET_TOP = 100; // Ajusta este valor si es necesario
 
     function changeLinkState() {
         let index = sections.length;
 
-        while(--index && window.scrollY + OFFSET_TOP < sections[index].offsetTop) {}
+        // Comprobamos si hemos llegado al final de la página para resaltar la sección de contacto
+        const pageBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - OFFSET_TOP;
 
-        navLinks.forEach((link) => link.classList.remove('active'));
-
-        const activeSection = sections[index];
-        let activeLink;
-        
-        // Verificar si la sección activa es "tecnologías"
-        if (activeSection && (activeSection.id == 'tecnologias' || activeSection.id == 'formacion')) {
-            // Cambiar el enlace activo a "sobre-mi"
-            activeLink = document.querySelector('#navbar a[href="#sobre-mi"]');
+        if (pageBottom) {
+            // Resaltar la sección de contacto
+            navLinks.forEach((link) => link.classList.remove('active'));
+            document.querySelector('#navbar a[href="#contacto"]').classList.add('active');
         } else {
-            // Seleccionar el enlace correspondiente a la sección activa
-            activeLink = document.querySelector('#navbar a[href="#' + activeSection.id + '"]');
-        }
+            while(--index && window.pageYOffset + OFFSET_TOP < sections[index].offsetTop) {}
 
-        if (activeLink) {
-            activeLink.classList.add('active');
+            navLinks.forEach((link) => link.classList.remove('active'));
+
+            let activeSection = sections[index];
+            let activeLink;
+
+            // Si estamos en 'Tecnologías' o 'Formación', resaltamos 'Sobre Mí'
+            if(activeSection && (activeSection.id === 'tecnologias' || activeSection.id === 'formacion')) {
+                activeLink = document.querySelector('#navbar a[href="#sobre-mi"]');
+            } else {
+                // De lo contrario, resaltamos la sección correspondiente
+                activeLink = document.querySelector('#navbar a[href="#' + (activeSection ? activeSection.id : '') + '"]');
+            }
+
+            if(activeLink) {
+                activeLink.classList.add('active');
+            }
         }
     }
 
-    changeLinkState();
+    // Escuchamos el evento de desplazamiento para cambiar el estado del enlace
     window.addEventListener('scroll', changeLinkState);
+
+    // Llamamos a la función una vez para establecer el estado inicial
+    changeLinkState();
 });

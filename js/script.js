@@ -14,7 +14,8 @@ setTimeout(function() {
     $('#inicio h1').fitText(1, { minFontSize: '42px', maxFontSize: '68.8px' });
 
 }, 100);
-  
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
@@ -40,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let activeLink;
 
             // Si estamos en 'Tecnologías' o 'Formación', resaltamos 'Sobre Mí'
-            if(activeSection && (activeSection.id === 'tecnologias' || activeSection.id === 'formacion')) {
-                activeLink = document.querySelector('#navbar a[href="#sobre-mi"]');
+            if(activeSection && (activeSection.id === 'tecnologias' || activeSection.id === 'aptitudes')) {
+                activeLink = document.querySelector('#navbar a[href="#habilidades"]');
             } else {
                 // De lo contrario, resaltamos la sección correspondiente
                 activeLink = document.querySelector('#navbar a[href="#' + (activeSection ? activeSection.id : '') + '"]');
@@ -59,3 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Llamamos a la función una vez para establecer el estado inicial
     changeLinkState();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#navbarNavDropdown .nav-link').forEach(function (element) {
+      element.addEventListener('click', function () {
+        var bsCollapse = new bootstrap.Collapse(document.getElementById('navbarNavDropdown'), {
+          toggle: false
+        });
+        bsCollapse.hide();
+      });
+    });
+  });
+  

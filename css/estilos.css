@@ -41,37 +41,53 @@ body, html {
 }
 
 #navbar {
-    background-color: var(--navbar-background-color);
-    padding: 5px 10px;
+  background-color: var(--navbar-background-color);
+  padding: 5px 10px;
 }
 
-/* Esto afecta a todas las etiquetas <a> dentro del lavbar */
+/* This affects all <a> tags inside the navbar */
 #navbar a {
-    padding: 14px 16px;
-    margin-right: 8px; /* Añadimos margen para separar los elementos */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    transition: background-color 0.3s, transform 0.3s; /* Suaviza la transición de color y transformación al quitar el ratón */
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    /*flex: 0 0 auto; */
-    color: var(--navbar-text-color); /*Asignamos como color la variable navbar-text-color*/
-    border-radius: 4px; /* Esquinas redondeadas para un aspecto suave */
+  padding: 14px 16px;
+  margin-right: 8px; /* We add a margin to separate the elements */
+  text-decoration: none; /* Removes the underlining of links */
+  transition: background-color 0.3s; /* Smooths the transition of color when hovering */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: var(--navbar-text-color); /* Assign the color variable navbar-text-color */
+  border-radius: 4px; /* Rounded corners for a smooth appearance */
 }
 
 #navbar a:hover, #navbar a.active {
-    background-color: var(--navbar-hover-active-color);
-    color: #ffffff;
+  background-color: var(--navbar-hover-active-color);
+  color: #ffffff;
 }
 
+/* Adjustments for smaller screens */
+@media (max-width: 991px) {
+  #navbar a {
+      margin-top: 2px;
+      margin-right: 0; /* Remove margin on smaller screens */
+      transition: background-color 0.3s; /* Keep the transition for color only */
+  }
+
+  /* Remove the scale transformation on hover for smaller screens */
+  #navbar a:hover {
+      transform: none; /* No scaling on hover */
+      background-color: var(--navbar-hover-active-color); /* Keep the color transition */
+  }
+}
+
+/* If you still want a subtle effect on hover, you can slightly change the opacity instead of scaling */
 #navbar a:hover {
-    transform: scale(1.05);
+  opacity: 0.9;
 }
 
-#navbar h1 {
-    margin: 0 20px 0 10px; /* Añadimos margen a los lados del título */
-    flex-grow: 1; /* El título ocupará el espacio disponible */
+/* Ensure the navbar-toggler does not expand too much */
+.navbar-toggler {
+  padding: 0.25rem 0.75rem; /* Adjust the padding to make it smaller if necessary */
 }
+
 
 section {
     text-align: center; /* Alinea el texto al centro */
@@ -101,6 +117,28 @@ section {
     padding: 10px; /* Mejorar el espaciado en móviles */
   }
 
+}
+
+#aptitudes{
+  background: var(--background-color1);
+  padding-top: 20px;
+}
+
+.aptitudes-texto{
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.aptitud-content{
+  transition: transform 0.3s ease;
+}
+
+.aptitud-content:hover {
+  transform: scale(1.1); /* Slightly increase the size of the image */
+}
+
+#habilidades{
+  background: var(--background-color1);
 }
 
 #tecnologias {
